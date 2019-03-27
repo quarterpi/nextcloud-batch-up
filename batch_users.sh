@@ -27,7 +27,7 @@ usage () {
   echo "batch_users.sh -p 123password321 foobar.csv"
   echo "will add the users from foobar.csv and assign them the password 123password321"
   echo "The command:"
-  echo"batch_users.sh foobar.csv"
+  echo "batch_users.sh foobar.csv"
   echo "will add the users from foobar.csv and assign them the default password."
   echo ""
   echo "batch_users will return 0 on success and a positive number on failure."
@@ -73,7 +73,6 @@ done
 # If not, print error and exit.
 if [[ $# -eq  0 ]]
 then
-#  (>&2 echo "Expected at least one argument, but no arguments were supplied.")
   die 'Error: Expected at least one argument, but no arguments were supplied.'
 fi
 
@@ -87,11 +86,6 @@ fi
 
 
 input_file="$1"
-
-#   Input File
-#   Jack Ripper,jack,test_group
-#   Jill Ripper,jill,test_group
-#   Johny Appleseed,johny,test_group
 
 while IFS=, read -r f1 f2 f3 f4
 do
